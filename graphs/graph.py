@@ -2,6 +2,10 @@ from collections import deque
 
 
 def build_graph(inputGraph):
+    """
+    Just a helper function to get an adjacency list of ints from strings.
+
+    """
     
     outputGraph = {}
 
@@ -16,6 +20,13 @@ def build_graph(inputGraph):
     
 
 def BFS(inputGraph, startingVertex):
+    """
+    BFS is best implemented using a deque. Nodes to be explored next are added
+    to the back of the deque. Nodes to directly explore next are pulled of the 
+    front.
+
+    """
+
 
     searchPath = []
     graph = {}
@@ -50,6 +61,11 @@ def run_DFS(inputGraph, startingVertex):
     return searchPath
 
 def DFS(inputGraph, startingVertex):
+    """
+    DFS is best used with a stack. That way you can add to the top explored items
+    and pop them off the top of the stack.
+
+    """
 
     graph = {}
 
