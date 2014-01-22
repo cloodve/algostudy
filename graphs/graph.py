@@ -42,11 +42,9 @@ searchPath = []
 def run_DFS(inputGraph, startingVertex):
 
     searchPath.append(startingVertex)
-    print "Starting with " + str(startingVertex)
 
     for endVertex in inputGraph[startingVertex]:
         if endVertex not in searchPath:
-            print "Exploring" + str(endVertex)
             run_DFS(inputGraph, endVertex)
 
     return searchPath
